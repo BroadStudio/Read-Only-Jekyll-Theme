@@ -5,8 +5,6 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-console.log('Loading init.js');
-
 (function($) {
 
 	skel.init({
@@ -49,13 +47,13 @@ console.log('Loading init.js');
 	});
 
 	$(function() {
-		
-		console.log('Nav Scroll Initialized');
 
 		var $body = $('body'),
 			$header = $('#header'),
 			$nav = $('#nav'), $nav_a = $nav.find('a'),
 			$wrapper = $('#wrapper');
+			
+			console.log($nav_a);
 
 		// Forms (IE<10).
 			var $form = $('form');
@@ -84,6 +82,8 @@ console.log('Loading init.js');
 
 						var $this = $(this),
 							href = $this.attr('href');
+							
+							console.log($this);
 
 						// Not an internal link? Bail.
 							if (href.charAt(0) != '#')
